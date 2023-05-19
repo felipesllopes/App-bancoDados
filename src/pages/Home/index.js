@@ -16,12 +16,20 @@ export default function Home() {
                 onPress={() => navigation.navigate('Cadastro')}
             />
 
-            <Text />
+            <View style={{ marginVertical: 10, }} />
 
             <Button
                 style={styles.button}
                 title="Autenticação de usuário"
                 onPress={() => navigation.navigate('Autenticacao')}
+            />
+
+            <View style={{ marginVertical: 10, }} />
+
+            <Button
+                style={styles.button}
+                title="Login de usuário"
+                onPress={() => navigation.navigate('Login')}
             />
 
         </View>

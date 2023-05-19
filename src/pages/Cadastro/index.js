@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { ActivityIndicator, Button, FlatList, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, Button, FlatList, StyleSheet, Text, TextInput, View, Keyboard } from "react-native";
 import firebase from "../../firebaseConnection";
 import Listagem from "./Listagem";
 
@@ -65,6 +65,7 @@ export default function Cadastro() {
             alert("Cadastrado com sucesso!");
             setNome("")
             setCargo("");
+            Keyboard.dismiss();
 
         } else {
             alert("Preencha os campos!")
@@ -90,6 +91,8 @@ export default function Cadastro() {
                 onChangeText={(text) => setCargo(text)}
             />
 
+            <View style={{ marginBottom: 10 }} />
+
             <Button
                 title="Novo funcionário"
                 onPress={cadastrar}
@@ -108,6 +111,7 @@ export default function Cadastro() {
             }
 
             <Button
+                color={"#555"}
                 title="Voltar"
                 onPress={() => navigation.goBack()}
             />
