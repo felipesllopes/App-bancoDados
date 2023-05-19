@@ -1,9 +1,12 @@
+import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { Button, FlatList, StyleSheet, Text, TextInput, View, ActivityIndicator } from "react-native";
-import firebase from "./firebaseConnection";
+import { ActivityIndicator, Button, FlatList, StyleSheet, Text, TextInput, View } from "react-native";
+import firebase from "../../firebaseConnection";
 import Listagem from "./Listagem";
 
-export default function Home() {
+export default function Cadastro() {
+
+    const navigation = useNavigation();
 
     const [nome, setNome] = useState("");
     const [cargo, setCargo] = useState("");
@@ -104,7 +107,10 @@ export default function Home() {
                 />)
             }
 
-
+            <Button
+                title="Voltar"
+                onPress={() => navigation.goBack()}
+            />
 
         </View>
     )
@@ -113,7 +119,7 @@ export default function Home() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        margin: 10,
+        margin: 20,
     },
     text: {
         fontSize: 18,

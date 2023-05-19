@@ -1,12 +1,13 @@
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
-import Home from './src';
+import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar, StyleSheet } from 'react-native';
+import Routes from './src/routes';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Home />
+    <NavigationContainer styles={styles.container}>
+      <Routes />
       <StatusBar />
-    </View>
+    </NavigationContainer>
   );
 }
 
