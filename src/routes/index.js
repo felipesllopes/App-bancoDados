@@ -3,6 +3,7 @@ import Autenticacao from '../pages/Autenticacao';
 import Cadastro from '../pages/Cadastro';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
+import UsuarioLogado from '../pages/Login/UsuarioLogado';
 
 export default function Routes() {
 
@@ -25,6 +26,10 @@ export default function Routes() {
             />
 
             <Stack.Screen name='Login' component={Login}
+                options={{ headerShown: false }}
+            />
+
+            <Stack.Screen name='UsuarioLogado' component={UsuarioLogado}
                 options={{ headerShown: false }}
             />
 
