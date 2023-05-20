@@ -12,6 +12,7 @@ export default function UsuarioLogado(props) {
         alert("Usuário deslogado")
         await firebase.auth().signOut();
         navigation.goBack();
+        setEmail("");
     }
 
     return (
@@ -40,14 +41,13 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: 'bold',
         textAlign: 'center',
-        backgroundColor: '#00BFFF',
+        backgroundColor: 'green',
         textAlignVertical: 'center',
         height: 50,
         width: '70%',
         alignSelf: 'center',
-        borderRadius: 10,
+        borderRadius: 4,
         color: 'white',
-        borderWidth: 3,
         marginTop: 15,
         marginBottom: 25,
     },

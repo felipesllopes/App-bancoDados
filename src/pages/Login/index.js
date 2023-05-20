@@ -17,13 +17,17 @@ export default function Login() {
                 setUser(value.user.email)
                 setEmail("");
                 setPassword("");
-                navigation.navigate("UsuarioLogado", { dados: user })
+                navigation.navigate("UsuarioLogado", { dados: value.user.email })
                 return;
             })
             .catch((error) => {
                 alert("Usuário ou senha inválido!");
                 return;
             })
+    }
+
+    function teste() {
+        console.log(user)
     }
 
     return (
@@ -66,6 +70,11 @@ export default function Login() {
                 onPress={() => navigation.goBack()}
             />
 
+            <Button
+                title="Teste"
+                onPress={() => console.log(user)}
+            />
+
         </View>
     )
 }
@@ -84,9 +93,8 @@ const styles = StyleSheet.create({
         height: 50,
         width: '70%',
         alignSelf: 'center',
-        borderRadius: 10,
+        borderRadius: 4,
         color: 'white',
-        borderWidth: 3,
         marginTop: 15,
         marginBottom: 25,
     },

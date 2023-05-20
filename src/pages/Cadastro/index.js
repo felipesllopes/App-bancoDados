@@ -75,6 +75,8 @@ export default function Cadastro() {
     return (
         <View style={styles.container}>
 
+            <Text style={styles.tittle}>Cadastrar usuário</Text>
+
             <Text style={styles.text}>Nome</Text>
             <TextInput
                 style={styles.textInput}
@@ -124,6 +126,20 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         margin: 20,
+    },
+    tittle: {
+        fontSize: 22,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        backgroundColor: 'green',
+        textAlignVertical: 'center',
+        height: 50,
+        width: '70%',
+        alignSelf: 'center',
+        borderRadius: 4,
+        color: 'white',
+        marginTop: 15,
+        marginBottom: 25,
     },
     text: {
         fontSize: 18,
